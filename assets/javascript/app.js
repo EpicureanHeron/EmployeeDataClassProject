@@ -11,17 +11,18 @@
 
 var database = firebase.database();
 
-var employeeName, employeeRole,startDate, monthlyRate
+var employeeName, employeeRole, employeeDate, employeeRate
 
 //
 $("#submit").on("click", function() {
+  console.log("Submit is clicked.")
     //this employee name
     employeeName = $("#roleSubmit").val().trim
     employeeRole = $("#nameSubmit").val().trim
     employeeDate = $("#dateSubmit").val().trim
-   // employeeMonths = $("#monthsSubmit").val().trim
+    // employeeMonths = $("#monthsSubmit").val().trim
     employeeRate = $("#rateSubmit").val().trim
-    employeeEarning = employeeRate * employeeMonths
+    //employeeEarning = employeeRate * employeeMonths
     database.ref().push({
         employeeName: employeeName,
         employeeRole: employeeRole,
@@ -73,11 +74,11 @@ $("#submit").on("click", function() {
 //       $("#eRate").html(employeeRate)
 // })
 
-$("#submit").on("click", function() {
-    employeeEarning = employeeRate * employeeMonths
-      console.log(employeeEarning)
-      $("#eEarning").html(employeeEarning)
-})
+// $("#submit").on("click", function() {
+//     employeeEarning = employeeRate * employeeMonths
+//       console.log(employeeEarning)
+//       $("#eEarning").html(employeeEarning)
+// })
 
 // //JAVASCRIPT IN//
 // $(“#eTable”).append(
