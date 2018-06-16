@@ -31,7 +31,8 @@ $("#submit").on("click", function() {
         employeeRole: employeeRole,
         employeeDate: employeeDate,
         //employeeMonths: employeeMonths
-        employeeRate: employeeRate
+        employeeRate: employeeRate,
+        dataAdded: firebase.database.ServerValue.TIMESTAMP,
       })
       // console.log(employeeName)
       // $("#eName").html(employeeName)
