@@ -9,6 +9,9 @@
   };
   firebase.initializeApp(config);
 
+var database = firebase.database();
+
+var employeeName, employeeRole,startDate, monthlyRate
 
 
 $("#submit").on("click", function() {
@@ -18,7 +21,7 @@ $("#submit").on("click", function() {
       })
       console.log(employeeName)
       $("#eName").html(employeeName)
-}
+})
 
 $("#submit").on("click", function() {
     employeeRole = $("#nameSubmit").val().trim
@@ -27,7 +30,7 @@ $("#submit").on("click", function() {
       })
       console.log(employeeRole)
       $("#eRole").html(employeeRole)
-}
+})
 
 $("#submit").on("click", function() {
     employeeDate = $("#dateSubmit").val().trim
@@ -36,7 +39,7 @@ $("#submit").on("click", function() {
       })
       console.log(employeeDate)
       $("#eDate").html(employeeDate)
-}
+})
 
 $("#submit").on("click", function() {
     employeeMonths = $("#monthsSubmit").val().trim
@@ -45,7 +48,7 @@ $("#submit").on("click", function() {
       })
       console.log(employeeMonths)
       $("#eMonths").html(employeeMonths)
-}
+})
 
 $("#submit").on("click", function() {
     employeeRate = $("#rateSubmit").val().trim
@@ -54,13 +57,13 @@ $("#submit").on("click", function() {
       })
       console.log(employeeRate)
       $("#eRate").html(employeeRate)
-}
+})
 
 $("#submit").on("click", function() {
     employeeEarning = employeeRate * employeeMonths
       console.log(employeeEarning)
       $("#eEarning").html(employeeEarning)
-}
+})
 
 // //JAVASCRIPT IN//
 // $(“#eTable”).append(
