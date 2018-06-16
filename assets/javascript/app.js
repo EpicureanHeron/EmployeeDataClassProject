@@ -13,51 +13,65 @@ var database = firebase.database();
 
 var employeeName, employeeRole,startDate, monthlyRate
 
-
+//
 $("#submit").on("click", function() {
+    //this employee name
     employeeName = $("#roleSubmit").val().trim
+    employeeRole = $("#nameSubmit").val().trim
+    employeeDate = $("#dateSubmit").val().trim
+   // employeeMonths = $("#monthsSubmit").val().trim
+    employeeRate = $("#rateSubmit").val().trim
+    employeeEarning = employeeRate * employeeMonths
     database.ref().push({
-        employeeName: employeeName
+        employeeName: employeeName,
+        employeeRole: employeeRole,
+        employeeDate: employeeDate,
+        //employeeMonths: employeeMonths
+        employeeRate: employeeRate
       })
       console.log(employeeName)
       $("#eName").html(employeeName)
-})
-
-$("#submit").on("click", function() {
-    employeeRole = $("#nameSubmit").val().trim
-    database.ref().push({
-        employeeRole: employeeRole
-      })
-      console.log(employeeRole)
       $("#eRole").html(employeeRole)
-})
-
-$("#submit").on("click", function() {
-    employeeDate = $("#dateSubmit").val().trim
-    database.ref().push({
-        employeeDate: employeeDate
-      })
-      console.log(employeeDate)
       $("#eDate").html(employeeDate)
-})
-
-$("#submit").on("click", function() {
-    employeeMonths = $("#monthsSubmit").val().trim
-    database.ref().push({
-        employeeMonths: employeeMonths
-      })
-      console.log(employeeMonths)
       $("#eMonths").html(employeeMonths)
-})
-
-$("#submit").on("click", function() {
-    employeeRate = $("#rateSubmit").val().trim
-    database.ref().push({
-        employeeRate: employeeRate
-      })
-      console.log(employeeRate)
       $("#eRate").html(employeeRate)
 })
+
+// $("#submit").on("click", function() {
+//     employeeRole = $("#nameSubmit").val().trim
+//     database.ref().push({
+//         employeeRole: employeeRole
+//       })
+//       console.log(employeeRole)
+//       $("#eRole").html(employeeRole)
+// })
+
+// $("#submit").on("click", function() {
+//     employeeDate = $("#dateSubmit").val().trim
+//     database.ref().push({
+//         employeeDate: employeeDate
+//       })
+//       console.log(employeeDate)
+//       $("#eDate").html(employeeDate)
+// })
+
+// $("#submit").on("click", function() {
+//     employeeMonths = $("#monthsSubmit").val().trim
+//     database.ref().push({
+//         employeeMonths: employeeMonths
+//       })
+//       console.log(employeeMonths)
+//       $("#eMonths").html(employeeMonths)
+// })
+
+// $("#submit").on("click", function() {
+//     employeeRate = $("#rateSubmit").val().trim
+//     database.ref().push({
+//         employeeRate: employeeRate
+//       })
+//       console.log(employeeRate)
+//       $("#eRate").html(employeeRate)
+// })
 
 $("#submit").on("click", function() {
     employeeEarning = employeeRate * employeeMonths
