@@ -39,14 +39,21 @@ $("#submit").on("click", function() {
       // $("#eDate").html(employeeDate)
       // $("#eMonths").html(employeeMonths)
       // $("#eRate").html(employeeRate)
+
+      //Function that performs the logic for total months in company
+      //Return value into employeeMonth
+
+      //Function that performs the logic for total earnings by multiplying months x earnigs
+      //Return value into employeeEarnings
+
       $("#eTable").append(
         "<tr><th scope=‘row’>" + "</th>" +
         "<td>" + employeeName + "</td>" +
         "<td>" + employeeRole + "</td>" +
         "<td>" + employeeDate + "</td>" +
-        //"<td>" + eMonths + "</td>" +
+        //"<td>" + employeeMonth + "</td>" +
         "<td>" + employeeRate + "</td>" +
-        //"<td>" + eEarnings + "</td>" +
+        //"<td>" + employeeEarnings + "</td>" +
         "</tr>"
         )
 })
