@@ -52,8 +52,7 @@ $("#submit").on("click", function() {
 database.ref().on("child_added",function(childSnapshot) {
   employeeNameDisplay = childSnapshot.val().employeeName
   $("#eTable").append(
-    "<tr><th scope=‘row’>" + "</th>" +
-    "<td>" + employeeNameDisplay  + "</td>" +
+    "<tr> <td>" + employeeNameDisplay  + "</td>" +
     "<td>" + employeeRole + "</td>" +
     "<td>" + employeeDate + "</td>" +
     //"<td>" + employeeMonth + "</td>" +
