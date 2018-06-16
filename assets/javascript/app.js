@@ -51,17 +51,14 @@ $("#submit").on("click", function() {
 
 database.ref().on("child_added",function(childSnapshot) {
   employeeNameDisplay = childSnapshot.val().employeeName
-  $("#eTable").append(
-    "<tr> <td>" + employeeNameDisplay  + "</td>" +
-    "<td>" + employeeRole + "</td>" +
-    "<td>" + employeeDate + "</td>" +
-    //"<td>" + employeeMonth + "</td>" +
-    "<td>" + employeeRate + "</td>" +
-    //"<td>" + employeeEarnings + "</td>" +
-    "</tr>"
-    )
-    console.log(childSnapshot.val().employeeName)
-    $("#“BTable”").html(employeeNameDisplay)
+  employeeRoleDisplay = childSnapshot.val().employeeRole
+  employeeDateDisplay = childSnapshot.val().employeeDate
+  employeeRateDisplay = childSnapshot.val().employeeRate
+  var newDiv  = $("<div>" )
+    $("#eName").append(newDiv + employeeNameDisplay)
+    $("#eRole").append(newDiv + employeeRoleDisplay)
+    $("#eDate").append(newDiv + employeeDateDisplay)
+    $("#eRate").append( newDiv + employeeRateDisplay)
 })
 
 
