@@ -63,8 +63,10 @@ database.ref().on("child_added",function(childSnapshot) {
   var formattedDate = moment(employeeDateDisplay).format(employeeDateDisplay, "MM/DD/YYYY")
   var now = moment()
  var  monthsPast = moment(now).diff(formattedDate, "months"); 
+ var moneyMade = monthsPast * employeeRateDisplay
     $("#eName").append("<div>" + employeeNameDisplay + "</div>")
     $("#eMonths").append("<div>" + monthsPast + "</div>" )
+    $("#eEarning").append("<div>" + moneyMade + "</div>" )
     $("#eRole").append("<div>" + employeeRoleDisplay + "</div>")
     $("#eDate").append("<div>" + employeeDateDisplay + "</div>")
     $("#eRate").append("<div>" + employeeRateDisplay + "</div>")
