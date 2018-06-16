@@ -60,7 +60,11 @@ database.ref().on("child_added",function(childSnapshot) {
   employeeRoleDisplay = childSnapshot.val().employeeRole
   employeeDateDisplay = childSnapshot.val().employeeDate
   employeeRateDisplay = childSnapshot.val().employeeRate
+  var formattedDate = moment(employeeDateDisplay).format(employeeDateDisplay, "MM/DD/YYYY")
+  var now = moment()
+ var  monthsPast = moment(now).diff(formattedDate, "months"); 
     $("#eName").append("<div>" + employeeNameDisplay + "</div>")
+    $("#eMonths").append("<div>" + monthsPast + "</div>" )
     $("#eRole").append("<div>" + employeeRoleDisplay + "</div>")
     $("#eDate").append("<div>" + employeeDateDisplay + "</div>")
     $("#eRate").append("<div>" + employeeRateDisplay + "</div>")
