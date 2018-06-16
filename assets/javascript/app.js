@@ -11,7 +11,7 @@
 
 var database = firebase.database();
 
-var employeeName, employeeRole, employeeDate, employeeRate
+var employeeName, employeeRole, employeeDate, employeeRate, employeeMonths, 
 
 //
 $("#submit").on("click", function() {
@@ -19,14 +19,15 @@ $("#submit").on("click", function() {
 
   console.log("Submit is clicked.")
     //this employee name
-    employeeName = $("#roleSubmit").val().trim
-    employeeRole = $("#nameSubmit").val().trim
-    employeeDate = $("#dateSubmit").val().trim
+    employeeName = $("#nameSubmit").val().trim()
+    console.log(employeeName)
+    employeeRole = $("#roleSubmit").val().trim()
+    employeeDate = $("#dateSubmit").val().trim()
     // employeeMonths = $("#monthsSubmit").val().trim
-    employeeRate = $("#rateSubmit").val().trim
+    employeeRate = $("#rateSubmit").val().trim()
     //employeeEarning = employeeRate * employeeMonths
     database.ref().push({
-        employeeName: employeeName,
+        employeeName: "ted",
         employeeRole: employeeRole,
         employeeDate: employeeDate,
         //employeeMonths: employeeMonths
