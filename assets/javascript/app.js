@@ -54,11 +54,10 @@ database.ref().on("child_added",function(childSnapshot) {
   employeeRoleDisplay = childSnapshot.val().employeeRole
   employeeDateDisplay = childSnapshot.val().employeeDate
   employeeRateDisplay = childSnapshot.val().employeeRate
-  var newDiv  = $("<div>")
-    $("#eName").append(newDiv + employeeNameDisplay)
-    $("#eRole").append(newDiv + employeeRoleDisplay)
-    $("#eDate").append(newDiv + employeeDateDisplay)
-    $("#eRate").append(newDiv + employeeRateDisplay)
+    $("#eName").append("<div>" + employeeNameDisplay + "</div>")
+    $("#eRole").append("<div>" + employeeRoleDisplay + "</div>")
+    $("#eDate").append("<div>" + employeeDateDisplay + "</div>")
+    $("#eRate").append("<div>" + employeeRateDisplay + "</div>")
 })
 
 
