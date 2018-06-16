@@ -15,6 +15,8 @@ var employeeName, employeeRole, employeeDate, employeeRate
 
 //
 $("#submit").on("click", function() {
+  event.preventDefault();
+
   console.log("Submit is clicked.")
     //this employee name
     employeeName = $("#roleSubmit").val().trim
