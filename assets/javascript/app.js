@@ -47,17 +47,26 @@ $("#submit").on("click", function() {
       //Function that performs the logic for total earnings by multiplying months x earnigs
       //Return value into employeeEarnings
 
-      $("#eTable").append(
-        "<tr><th scope=‘row’>" + "</th>" +
-        "<td>" + employeeName + "</td>" +
-        "<td>" + employeeRole + "</td>" +
-        "<td>" + employeeDate + "</td>" +
-        //"<td>" + employeeMonth + "</td>" +
-        "<td>" + employeeRate + "</td>" +
-        //"<td>" + employeeEarnings + "</td>" +
-        "</tr>"
-        )
 })
+
+database.ref().on("child_added",function(childSnapshot) {
+  employeeNameDisplay = childSnapshot.val().employeeName
+  $("#eTable").append(
+    "<tr><th scope=‘row’>" + "</th>" +
+    "<td>" + employeeNameDisplay  + "</td>" +
+    "<td>" + employeeRole + "</td>" +
+    "<td>" + employeeDate + "</td>" +
+    //"<td>" + employeeMonth + "</td>" +
+    "<td>" + employeeRate + "</td>" +
+    //"<td>" + employeeEarnings + "</td>" +
+    "</tr>"
+    )
+    console.log(childSnapshot.val().employeeName)
+    $("#“BTable”").html(employeeNameDisplay)
+})
+
+
+
 
 // $("#submit").on("click", function() {
 //     employeeRole = $("#nameSubmit").val().trim
