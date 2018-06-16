@@ -33,12 +33,22 @@ $("#submit").on("click", function() {
         //employeeMonths: employeeMonths
         employeeRate: employeeRate
       })
-      console.log(employeeName)
-      $("#eName").html(employeeName)
-      $("#eRole").html(employeeRole)
-      $("#eDate").html(employeeDate)
-      $("#eMonths").html(employeeMonths)
-      $("#eRate").html(employeeRate)
+      // console.log(employeeName)
+      // $("#eName").html(employeeName)
+      // $("#eRole").html(employeeRole)
+      // $("#eDate").html(employeeDate)
+      // $("#eMonths").html(employeeMonths)
+      // $("#eRate").html(employeeRate)
+      $("#eTable").append(
+        "<tr><th scope=‘row’>" + "</th>" +
+        "<td>" + employeeName + "</td>" +
+        "<td>" + employeeRole + "</td>" +
+        "<td>" + employeeDate + "</td>" +
+        //"<td>" + eMonths + "</td>" +
+        "<td>" + employeeRate + "</td>" +
+        //"<td>" + eEarnings + "</td>" +
+        "</tr>"
+        )
 })
 
 // $("#submit").on("click", function() {
@@ -84,14 +94,3 @@ $("#submit").on("click", function() {
 // })
 
 // //JAVASCRIPT IN//
-// $(“#eTable”).append(
-//     “<tr><th scope=‘row’>” + numEmployees +
-//     “</th>” +
-//     “<td>” + eName + “</td>” +
-//     “<td>” + eRole + “</td>” +
-//     “<td>” + eDate + “</td>” +
-//     “<td>” + eMonths + “</td>” +
-//     “<td>” + eRate + “</td>” +
-//     “<td>” + eEarnings + “</td>” +
-//     “</tr>”
-//  )
