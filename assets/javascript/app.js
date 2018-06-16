@@ -11,7 +11,7 @@
 
 var database = firebase.database();
 
-var employeeName, employeeRole, employeeDate, employeeRate, employeeMonths, 
+var employeeName, employeeRole, employeeDate, employeeRate, employeeMonths
 
 //
 $("#submit").on("click", function() {
