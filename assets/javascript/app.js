@@ -26,6 +26,12 @@ $("#submit").on("click", function() {
     // employeeMonths = $("#monthsSubmit").val().trim
     employeeRate = $("#rateSubmit").val().trim()
     //employeeEarning = employeeRate * employeeMonths
+
+    $("#nameSubmit").empty()
+    $("#roleSubmit").empty()
+    $("#dateSubmit").empty()
+    $("#rateSubmit").empty()
+
     database.ref().push({
         employeeName: employeeName,
         employeeRole: employeeRole,
